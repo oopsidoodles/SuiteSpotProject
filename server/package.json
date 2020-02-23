@@ -1,0 +1,56 @@
+{
+  "name": "easypropertymanagment",
+  "version": "1.0.0",
+  "author": "SuiteSpot Technology Inc.",
+  "description": "A SaaS server for managing rental properties",
+  "main": "src/index.ts",
+  "keywords": [],
+  "license": "MIT",
+  "scripts": {
+    "dev:server": "nodemon --watch src --ignore 'src/**/*.schema.ts' --ext ts --exec npm start",
+    "build": "tsc --project tsconfig.json --rootDir src --outDir dist",
+    "start": "ts-node src/index.ts",
+    "test": "npm run build && ts-node node_modules/jasmine/bin/jasmine.js JASMINE_CONFIG_PATH=jasmine.json",
+    "test:once": "npm run build && ts-node node_modules/jasmine/bin/jasmine.js JASMINE_CONFIG_PATH=jasmine.json || true",
+    "test:coverage": "nyc npm run test:once"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.108",
+    "@types/shortid": "0.0.29",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "lodash": "^4.17.10",
+    "shortid": "^2.2.8"
+  },
+  "devDependencies": {
+    "@types/express": "^4.11.1",
+    "@types/express-serve-static-core": "^4.11.1",
+    "@types/jasmine": "^2.8.6",
+    "jasmine": "^3.1.0",
+    "jasmine-console-reporter": "^3.0.0",
+    "jasmine-spec-reporter": "^4.2.1",
+    "nodemon": "^1.17.3",
+    "nyc": "^11.7.1",
+    "ts-node": "^6.0.1",
+    "typescript": "^2.8.3"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "typings",
+      "src/**/*.spec.ts",
+      "src/_all.d.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "reporter": [
+      "json",
+      "html",
+      "text-summary"
+    ],
+    "all": true
+  }
+}
