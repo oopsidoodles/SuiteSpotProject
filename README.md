@@ -1,0 +1,2 @@
+# SuiteSpotProject
+Project for EasyPropertyManagement
