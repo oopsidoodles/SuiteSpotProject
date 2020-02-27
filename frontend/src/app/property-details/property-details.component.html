@@ -1,0 +1,13 @@
+<div [ngClass]="{'property-details':true,
+'visible':this.visible,
+'not-visible':!this.visible,
+'animation-slide-in':this.opening,
+'animation-slide-out':this.closing}
+">
+  <div *ngIf="this.selectedProperty">
+      <h2>{{this.selectedProperty.name}}</h2>
+    <p>{{this.selectedProperty.address}}</p>
+    <app-unit-list [units]="this.loadedUnits" (unitClickEmitter)="onUnitClick($event)"></app-unit-list>
+    <app-tenant-request-form *ngIf="this.selectedUnit" [selectedUnit]="this.selectedUnit" (closeEmitter)="this.onTenantRequestFormClose()"></app-tenant-request-form>
+  </div>
+</div>

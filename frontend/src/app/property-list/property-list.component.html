@@ -1,0 +1,8 @@
+<div class="property-list border border-secondary">
+  <div class="search-container border-bottom border-secondary">
+    <span class="search-prompt">Search: </span>
+    <textarea #search class="search" rows="1" (input)="onSearchBoxChange(search.value)"></textarea>
+  </div>
+  <app-property *ngFor="let property of this.getVisibleProperties()" [property]="property"
+                (clickEmitter)="propertyClickHandler($event)"></app-property>
+</div>

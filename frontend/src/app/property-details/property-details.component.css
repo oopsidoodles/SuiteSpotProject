@@ -1,0 +1,35 @@
+.property-details {
+  position: relative;
+}
+
+.not-visible {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animation-slide-in {
+  animation: slide-in-pd 1010ms;
+}
+
+.animation-slide-out {
+  animation: slide-out-pd 1010ms;
+}
+
+@keyframes slide-in-pd {
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out-pd {
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}

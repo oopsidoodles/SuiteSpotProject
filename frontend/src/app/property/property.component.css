@@ -1,0 +1,14 @@
+.property {
+  color:#444;
+  background:rgba(221, 221, 221, 1.0);
+  box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
+  cursor:pointer;
+  vertical-align:middle;
+  text-align: center;
+  border:2px solid #CCC;
+}
+
+.property:hover {
+  background: rgba(221, 221, 221, 0.5);
+  box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
+}

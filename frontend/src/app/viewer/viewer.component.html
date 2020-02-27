@@ -1,0 +1,19 @@
+<div [ngClass]="{'viewer':true,
+'visible':this.visible,
+'not-visible':!this.visible,
+'animation-slide-in':this.opening
+}">
+  <div style="text-align:center">
+    <h1>{{this.title}}</h1>
+  </div>
+  <div class="viewer-container container-fluid" [style.height.vh]="90">
+    <div class="row" [style.height.%]="100">
+      <div class="col-md-4">
+        <app-property-list [properties]="loadedProperties" (propertyClickEmitter)="propertyClickHandler($event)"></app-property-list>
+      </div>
+      <div class="col-md-8">
+        <app-property-details [selectedProperty]="selectedProperty"></app-property-details>
+      </div>
+    </div>
+  </div>
+</div>

@@ -17,7 +17,7 @@ describe('PropertyService', () => {
 
     const query = { name: 'test property' };
 
-    service.listProperties(query, 0, 15);
+    service.getProperties(query, 0, 15);
 
     expect(mockDao.query).toHaveBeenCalledWith(query, 0, 15);
   });

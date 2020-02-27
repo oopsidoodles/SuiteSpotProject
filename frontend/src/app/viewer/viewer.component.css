@@ -1,0 +1,22 @@
+.viewer-container {
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+.not-visible {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.animation-slide-in {
+  animation: slide-in-v 1010ms;
+}
+
+@keyframes slide-in-v {
+  100% {
+    opacity: 1;
+  }
+}

@@ -4,22 +4,9 @@ import { Observable } from 'rxjs/Observable';
 
 import { APIConfig } from '../api.config';
 
+import {Property} from './property.model';
+
 const PROPERTIES_PATH = `${APIConfig.BASE_API_PATH}/api/properties`;
-
-export interface Unit {
-  number: string;
-  floor: number;
-  rent: number;
-  vacant?: boolean;
-}
-
-export interface Property {
-  _id?: string; // Assigned automatically by datastore
-  name: string;
-  address: string;
-  units: Unit[];
-}
-
 
 @Injectable()
 export class PropertyService {
@@ -30,13 +17,8 @@ export class PropertyService {
 
   public queryProperties(
     query: any = {},
-    params: { limit: number; offset: number } = { limit: 10, offset: 0 }
+    params: { limit: number; offset: number } = { limit: 1000, offset: 0 } // gets everything
   ): Observable<Property[]> {
-    return this.http.post<Property[]>(PROPERTIES_PATH, query, {
-      params: {
-        limit: `${params.limit}`,
-        offset: `${params.offset}`
-      }
-    });
+    return this.http.get<Property[]>(`${PROPERTIES_PATH}?limit=${params.limit}&offset=${params.offset}`);
   }
 }

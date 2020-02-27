@@ -1,0 +1,82 @@
+.tenant-request-form {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  border: 3px solid gray;
+  background: #E8E8E8;
+  animation-fill-mode: forwards;
+}
+
+.title, .submit {
+  text-align: center;
+  color: #F5F5F5;
+  background: #202020;
+  padding: 5px;
+}
+
+.title {
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.textbox {
+  width: 95%;
+  height: 85%;
+  overflow-y: scroll;
+}
+
+.prompt, .textbox {
+  margin: 5px;
+}
+
+.prompt {
+  font-style: italic;
+}
+
+.form-group {
+  height: 80%;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: left;
+}
+
+.not-visible {
+  transform: translateY(110%);
+  opacity: 0;
+}
+
+.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.animation-slide-in {
+  animation: slide-in-trf 1010ms;
+}
+
+.animation-slide-out {
+  animation: slide-out-trf 1010ms;
+}
+
+@keyframes slide-in-trf {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out-trf {
+  100% {
+    transform: translateY(110%);
+    opacity: 0;
+  }
+}

@@ -1,14 +1,10 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+<div class="app">
+  <div *ngIf="this.authenticated; then auth else notauth">
+  </div>
+  <ng-template #auth>
+    <app-viewer></app-viewer>
+  </ng-template>
+  <ng-template #notauth>
+    <app-login (attemptedLogin)="this.loginAttemptHandler($event)"></app-login>
+  </ng-template>
 </div>
-<h2>Properties: </h2>
-<ul>
-  <li *ngFor="let prop of properties">
-    <h2>
-      <a [href]="'/properties/' + prop._id">{{ prop.name }}</a>
-    </h2>
-  </li>
-</ul>

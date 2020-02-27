@@ -41,3 +41,7 @@ This server is written in [TypeScript](https://www.typescriptlang.org/) a typed 
 ## Datastore
 
 We have written a very lightwieght in-memory datastore with flat file persistences. The API for the datastore is similar to the NoSQL MongoDB API, but definetly not a compatible API by any means.
+
+## Bugs fixed
+* PropertyController post -> get
+* Query params converted to int

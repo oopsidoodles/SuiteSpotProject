@@ -1,0 +1,59 @@
+.login {
+  display: flex;
+  justify-content: center;
+}
+
+.loginbox {
+  width: 35%;
+  margin-top: 10vh;
+  border: 3px solid gray;
+  background: #E8E8E8;
+}
+
+.title, .submit {
+  text-align: center;
+  color: #F5F5F5;
+  background: #202020;
+  padding: 5px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: left;
+}
+
+.alert {
+  margin-bottom: 0;
+}
+
+.not-visible {
+  opacity: 0;
+  transform: translateY(20%);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animation-slide-in {
+  animation: slide-in-l 1010ms;
+}
+
+.animation-slide-out {
+  animation: slide-out-l 1010ms;
+}
+
+@keyframes slide-in-l {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-out-l {
+  100% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+}
