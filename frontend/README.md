@@ -14,24 +14,20 @@ The following is a list of dependencies and their versions that must be installe
 
 First install the dependencies with `npm install`.
 
-Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. Navigate to `http://localhost:4500/`.
 
-## Code scaffolding
+## Notes
+This project uses Bootstrap (+jQuery dependency), however due to a bug, the `.angular-cli.json` file is ignored, making it impossible to link the scripts normally. Instead, the bootstrap and jQuery packages have been copied into `/src/assets/`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+As a result Bootstrap and jQuery versions have been fixed in `package.json`
 
-## Build
+You **do not** have to copy the packages in order to run, they are already there
 
-Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `npm test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `npm run e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Features
+- Login view (uses `AuthService`)
+  - username: `admin`
+  - password: `123`
+- Scrollable properties list +search bar (matches name & address, uses `PropertyService`)
+- Properties view with scrollable list of units, floor select dropdown (uses `UnitService`)
+- Ability to submit tenant request forms (click on a specific unit, uses `UnitService`)
+- Smooth transition animation between views :smiley:

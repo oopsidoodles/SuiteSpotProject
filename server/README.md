@@ -14,34 +14,24 @@ The following is a list of dependencies and their versions that must be installe
 
 Before starting the server be sure the dependencies are installed by running `npm install`.
 
-Also be sure to run `npm test` to make sure the tests are passing and the test data is loaded.
+Also **be sure to run** `npm test` to make sure the tests are passing and the test data is loaded.
 
-Start the development server with hot reload can be started with:
-
-```
-npm run dev:server
-```
-
-The server can be started without hotreload by running:
+The server can be started by running:
 
 ```
 npm start
 ```
 
-The server is running with the console prints:
+## Features/Changes
 
-```
-Server started at http://localhost:3000/
-```
+- Split up Property and Unit
+- Created/modified services, controllers, models (property, unit, user, auth)
+- Made generic DAO object
 
-## TypeScript
+For the most past, the changes/features added were to support the frontend, which mainly only GET's
 
-This server is written in [TypeScript](https://www.typescriptlang.org/) a typed superset on JavaScript. 
+ex. Tenant request forms do not get saved
 
-## Datastore
-
-We have written a very lightwieght in-memory datastore with flat file persistences. The API for the datastore is similar to the NoSQL MongoDB API, but definetly not a compatible API by any means.
-
-## Bugs fixed
+## Bugs fixed (minor bugs only)
 * PropertyController post -> get
 * Query params converted to int

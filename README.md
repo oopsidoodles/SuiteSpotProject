@@ -18,6 +18,9 @@ Checkout the [server/README.md](https://github.com/suitespot/EasyPropertyManagem
 
 Checkout the [frontend/README.md](https://github.com/suitespot/EasyPropertyManagement/blob/master/frontend/README.md) for more information about running the Angular frontend.
 
+## Features
+The above READMEs also detail features added, things changed, etc.
+
 ## LICENSE
 
 MIT
