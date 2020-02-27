@@ -14,7 +14,7 @@ The following is a list of dependencies and their versions that must be installe
 
 Checkout the [server/README.md](https://github.com/suitespot/EasyPropertyManagement/blob/master/server/README.md) for more information about running the API server.
 
-## Frontned
+## Frontend
 
 Checkout the [frontend/README.md](https://github.com/suitespot/EasyPropertyManagement/blob/master/frontend/README.md) for more information about running the Angular frontend.
 
