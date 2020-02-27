@@ -7,6 +7,8 @@
   border: 3px solid gray;
   background: #E8E8E8;
   animation-fill-mode: forwards;
+  display: flex;
+  flex-direction: column;
 }
 
 .title, .submit {
@@ -18,6 +20,7 @@
 
 .title {
   position: relative;
+  flex-grow: 1;
 }
 
 .close {
@@ -28,8 +31,8 @@
 
 .textbox {
   width: 95%;
-  height: 85%;
   overflow-y: scroll;
+  flex-grow: 1;
 }
 
 .prompt, .textbox {
@@ -42,6 +45,12 @@
 
 .form-group {
   height: 80%;
+  flex-grow: 9;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex-basis: 80%;
+  margin-bottom: 0;
 }
 
 .wrapper {

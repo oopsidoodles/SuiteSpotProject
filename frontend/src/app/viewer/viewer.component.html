@@ -11,7 +11,7 @@
       <div class="col-md-4">
         <app-property-list [properties]="loadedProperties" (propertyClickEmitter)="propertyClickHandler($event)"></app-property-list>
       </div>
-      <div class="col-md-8">
+      <div class="col-md-8" [style.height.%]="100">
         <app-property-details [selectedProperty]="selectedProperty"></app-property-details>
       </div>
     </div>
