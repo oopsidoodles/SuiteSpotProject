@@ -1,0 +1,35 @@
+<div class="unit-list">
+  <div class="dropdown">
+    <button type="button" class="btn dropdown-toggle mydropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      {{this.selectedFloor === -1 ? "All Floors" : "Floor: " + this.selectedFloor}}
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#" (click)="floorDropdownClickHandler(-1)">All</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#" *ngFor="let floor of this.floorNumbers" (click)="floorDropdownClickHandler(floor)">{{floor}}</a>
+    </div>
+  </div>
+
+  <div class="header container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+        <p>Unit#</p>
+      </div>
+      <div class="col-md-3">
+        <p>Floor#</p>
+      </div>
+      <div class="col-md-3">
+        <p>Rent($)</p>
+      </div>
+      <div class="col-md-3">
+        <p>Status</p>
+      </div>
+    </div>
+  </div>
+
+  <div [style.height.vh]="70">
+    <div class="scroll">
+      <app-unit *ngFor="let unit of this.getVisibleUnits()" [unit]="unit" (clickEmitter)="this.unitClickHandler($event)"></app-unit>
+    </div>
+  </div>
+</div>

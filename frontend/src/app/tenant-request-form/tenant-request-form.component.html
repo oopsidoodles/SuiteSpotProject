@@ -1,0 +1,19 @@
+<!--<div [ngClass]="{'tenant-request-form':true, 'animation-slide-in':true, 'animation-slide-out':this.closing}">-->
+<div [ngClass]="{'tenant-request-form':true,
+'visible':this.visible,
+'not-visible':!this.visible,
+'animation-slide-in':this.opening,
+'animation-slide-out':this.closing
+}">
+  <div class="title">
+    <p>Filing tenant request form for Unit# {{this.selectedUnit.number}}</p>
+    <button class="close" (click)="this.closeHandler()">&#10006;</button>
+  </div>
+  <div class="form-group">
+    <label class="prompt">Please describe your issue here...</label>
+    <textarea #text class="form-control textbox"></textarea>
+    <div class="wrapper">
+      <button class="btn submit" (click)="this.submitFormHandler(text.value)">Submit</button>
+    </div>
+  </div>
+</div>

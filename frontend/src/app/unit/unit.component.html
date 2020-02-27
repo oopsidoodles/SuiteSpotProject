@@ -1,0 +1,18 @@
+<div class="unit container-fluid">
+  <div class="row" (click)="this.clickHandler()">
+    <div class="col-md-3">
+      <p>{{this.unit.number}}</p>
+    </div>
+    <div class="col-md-3">
+      <p>{{this.unit.floor}}</p>
+    </div>
+    <div class="col-md-3">
+      <p>{{this.unit.rent}}</p>
+    </div>
+    <div class="col-md-3">
+      <div *ngIf="isVacant(); then vacant else notVacant"></div>
+      <ng-template #vacant><div>VACANT</div></ng-template>
+      <ng-template #notVacant><div>OCCUPIED</div></ng-template>
+    </div>
+  </div>
+</div>

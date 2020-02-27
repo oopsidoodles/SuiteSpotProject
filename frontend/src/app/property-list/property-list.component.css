@@ -1,0 +1,18 @@
+.property-list {
+  height: 90vh;
+  overflow-y: scroll;
+}
+
+.search-container {
+  display: flex;
+  padding: 5px;
+}
+
+.search {
+  flex: 1;
+}
+
+.search-prompt {
+  margin: 5px;
+  font-style: italic;
+}
