@@ -21,13 +21,6 @@ Checkout the [frontend/README.md](https://github.com/suitespot/EasyPropertyManag
 ## Features
 The above READMEs also detail features added, things changed, etc.
 
-## Note
-I did not know Angular when I started. I spent a day learning it, and then about 2 days making this.
-
-I ended up learning so much, I really enjoyed making this, and I'm very happy with the result
-
-:smiley:
-
 ## LICENSE
 
 MIT
